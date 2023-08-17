@@ -1,0 +1,10 @@
+#配置环境隔离
+spring:
+  profiles:
+    active: haha
+  group:
+    haha: dev,test
+    hehe: prod,adb
+# 组件没有标注注解，任意时候都生效 @Profile({dev})
+
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--th:text:   替换标签体的内容
+th:utext:  替换标签体的内容，不会转译html标签-->
+<h1>你好好:<span th:text="${name}"></span></h1>
+<hr/>
+<h1>你好:<span th:utext="${name}"></span></h1>
+<hr/>
+<!--拼接字符串-->
+<h1>你好:<span th:utext="|前串:${name}后串:${name}|"></span></h1>
+<hr/>
+<!--th:任意html属性 动态替换任意属性的值-->
+<img src="2.png" th:src="${imgUrl}" style="height: 300px ;"/>
+<hr/>
+<!--th:attr:任意属性指定-->
+<img src="2.png"  style="height: 300px ;" th:attr="src=${imgUrl},style=${style}"/>
+<br/>
+<img th:src="${imgUrl}" th:if="${show}" th:attr="style=${style}"/>
+</body>
+</html>

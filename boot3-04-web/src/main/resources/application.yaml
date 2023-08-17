@@ -1,0 +1,28 @@
+#spring:
+#  web:
+#    resources:
+#      add-mappings: true
+#    cache:
+#      period: 3600
+#      #缓存详细合并项控制，覆盖period的设置 :浏览器第一次请求服务器，
+#      #服务器告诉浏览器此资源缓存7200秒
+#      cache-control:
+#        max-age: 7200
+
+
+#开启基于请求参数的内容协商功能
+spring:
+  mvc:
+    contentnegotiation:
+      parameter-name: type
+      favor-parameter: true
+    problemdetails:
+      enabled: true
+  #配置Thymeleaf
+  thymeleaf:
+  #开发期间关闭，上线开启，默认开启
+    cache: false
+
+server:
+  error:
+    path: /error

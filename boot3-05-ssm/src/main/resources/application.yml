@@ -1,0 +1,14 @@
+# 1. 先配置数据源信息
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: password
+    url:  jdbc:mysql://localhost:3306/atguigu?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+    type: com.zaxxer.hikari.HikariDataSource
+
+# 2. 配置整合Mybatis
+mybatis:
+  mapper-Locations: classpath:/mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true

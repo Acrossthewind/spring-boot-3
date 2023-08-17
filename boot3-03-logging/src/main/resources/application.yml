@@ -1,0 +1,19 @@
+#logging:
+#  pattern:
+#    console: '%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{15} ===> %msg%n'
+---
+# 默认等级
+#logging:
+#  level:
+#    root: debug
+---
+logging:
+  file:
+    name: haha.log #只写name 生成到当前项目同位置 带路径：D:\\haha.log
+---
+#归档、切割
+logging:
+  logback:
+    rollingpolicy:
+      file-name-pattern: '${LOG_FILE}.%d{yyyy-MM-dd}.%i.gz）'
+      max-file-size: 1MB
